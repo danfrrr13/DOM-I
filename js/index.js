@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// Task 1 & 2
 
 let navItems = document.querySelectorAll('a');
 navItems.forEach((item, index) => item.textContent = siteContent['nav'][`nav-item-${index + 1}`]);
@@ -83,3 +84,29 @@ contactPs[2].textContent = siteContent.contact.email;
 
 let footerP = document.querySelector('footer p');
 footerP.textContent = siteContent.footer.copyright;
+
+// Task 3
+
+navItems.forEach(item => item.style.color = 'green');
+
+
+let nav = document.querySelector('nav');
+
+let link1 = document.createElement('a');
+let link2 = document.createElement('a');
+link1.textContent = 'Link1';
+link2.textContent = 'Link2';
+
+nav.prepend(link1);
+nav.append(link2);
+
+link1.setAttribute('href', '#');
+link2.setAttribute('href', '#');
+link1.style.color = 'green';
+link2.style.color = 'green';
+
+// Stretch
+
+let navItemsAll = document.querySelectorAll('a');
+
+navItemsAll.forEach(item => item.style.textDecoration = 'line-through')
